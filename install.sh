@@ -24,6 +24,8 @@ nano /var/lib/librespeed-rs/configs.toml
 echo "Enabling and starting Librespeed-rs service"
 sudo systemctl enable librespeed-rs.service
 
+systemctl daemon-reload
+
 sudo service librespeed-rs status
 
 echo "Installation and configuration complete! Service commands:    start (sudo service librespeed-rs start),    stop (sudo service librespeed-rs stop),    status (sudo service librespeed-rs status)"
