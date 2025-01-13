@@ -9,7 +9,8 @@ fi
 set -e
 
 echo "Downloading and installing Librespeed-rs"
-wget -qO- https://github.com/librespeed/speedtest-rust/releases/download/v1.3.6/librespeed-rs-x86_64-unknown-linux-gnu.deb | dpkg -i -
+wget https://github.com/librespeed/speedtest-rust/releases/download/v1.3.6/librespeed-rs-x86_64-unknown-linux-gnu.deb
+dpkg -i librespeed-rs-x86_64-unknown-linux-gnu.deb
 
 echo "Downloading and replacing index.html"
 wget -qO /var/lib/librespeed-rs/assets/index.html https://raw.githubusercontent.com/steveacab/librespeedtest-rs/refs/heads/main/index.html
@@ -22,5 +23,7 @@ nano /var/lib/librespeed-rs/configs.toml
 
 echo "Enabling and starting Librespeed-rs service"
 systemctl enable --now librespeed-rs.service
+
+sudo service librespeed-rs status
 
 echo "Installation and configuration complete! Service commands:  sudo service librespeed-rs start (start the serivce),  sudo service librespeed-rs stop (stop the service), sudo service librespeed-rs status (show the status of Librespeedtest-rs)"
