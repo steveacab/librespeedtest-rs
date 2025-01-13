@@ -22,7 +22,7 @@ read -n 1 -s
 nano /var/lib/librespeed-rs/configs.toml
 
 echo "Enabling and starting Librespeed-rs service"
-systemctl enable --now librespeed-rs.service
+sudo systemctl enable librespeed-rs.service
 
 sudo service librespeed-rs status
 
