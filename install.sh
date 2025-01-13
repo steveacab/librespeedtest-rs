@@ -12,7 +12,7 @@ echo "Downloading and installing Librespeed-rs"
 wget -qO- https://github.com/librespeed/speedtest-rust/releases/download/v1.3.6/librespeed-rs-x86_64-unknown-linux-gnu.deb | dpkg -i -
 
 echo "Modifying index.html"
-wget -qO /var/lib/librespeed-rs/assets/index.html blob:https://github.com/fdb1cb26-2fdc-431a-b9c9-f0fe5f4395ea
+wget -qO /var/lib/librespeed-rs/assets/index.html https://raw.githubusercontent.com/steveacab/librespeedtest-rs/refs/heads/main/index.html
 
 echo "Enabling and starting Librespeed-rs service"
 systemctl enable --now librespeed-rs.service
