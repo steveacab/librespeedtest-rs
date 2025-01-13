@@ -26,4 +26,4 @@ systemctl enable --now librespeed-rs.service
 
 sudo service librespeed-rs status
 
-echo "Installation and configuration complete! Service commands:  sudo service librespeed-rs start (start the serivce),  sudo service librespeed-rs stop (stop the service), sudo service librespeed-rs status (show the status of Librespeedtest-rs)"
+echo "Installation and configuration complete! Service commands:    start (sudo service librespeed-rs start),    stop (sudo service librespeed-rs stop),    status (sudo service librespeed-rs status)"
